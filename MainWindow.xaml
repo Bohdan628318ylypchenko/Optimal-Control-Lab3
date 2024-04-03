@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Optimal_Control_Lab3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <Button Name="Run" Content="Run me" Click="Run_Click"/>
+    </DockPanel>
 </Window>
