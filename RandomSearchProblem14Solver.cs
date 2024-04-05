@@ -1,41 +1,28 @@
 ﻿namespace Optimal_Control_Lab3
 {
-    public class RandomSearchProblem14Solver
+    public static class RandomSearchProblem14Solver
     {
-        public struct TX
-        {
-            public double t; public double x;
-        }
-
-        private Random random;
-
-        public RandomSearchProblem14Solver(Random random)
-        {
-            this.random = random;
-        }
-
-        public TX[] Solve(double a, double aValue, double b, double bValue, int segmentCount, VN start,
-                          double startStep, double minStep, int attemptCountBeforeStepDecrement, double stepCoefficient)
+        public static (double, double[], double[], VN) Solve(double a, double aValue, double b, double bValue, int segmentCount,
+                                                             double startStep, double minStep, double stepCoefficient, double maxFailedAttemptCount,
+                                                             Random random)
         {
             double dt = (b - a) / (double)segmentCount;
 
-            TX[] result = new TX[segmentCount + 1];
-            for (int i = 0; i <= segmentCount; i++)
-                result[i].t = a + i * (b - a) / (double)segmentCount;
-
             double step = startStep;
+            VN start = new VN(segmentCount - 1, random);
             VN current = start;
-            current.Set(0, aValue); current.Set(current.Dimension - 1, bValue);
             while (step > minStep)
             {
                 int failedAttemptCount = 0;
 
-                for (int i = 1; i <= attemptCountBeforeStepDecrement; i++)
+                for (int i = 0; i < maxFailedAttemptCount; i++)
                 {
-                    VN direction = _GenerateDirectionVector(segmentCount + 1).MutateByNormalize();
-                    VN next = current.DeepCopy().MutateByAdd(direction.MutateByMultiplyOnScalar(step));
+                    VN direction = new VN(segmentCount - 1, random).Normalize().MultiplyOnScalar(step);
+                    VN next = current.Add(direction);
 
-                    if (TargetFunction(next, dt) < TargetFunction(current, dt))
+                    double currentIntegralSum = IntegralSum(current, dt, aValue, bValue);
+                    double nextIntegralSum = IntegralSum(next, dt, aValue, bValue);
+                    if (nextIntegralSum < currentIntegralSum)
                     {
                         current = next;
                         break;
@@ -46,32 +33,38 @@
                     }
                 }
 
-                if (failedAttemptCount >= attemptCountBeforeStepDecrement)
+                if (failedAttemptCount >= maxFailedAttemptCount)
                     step *= stepCoefficient;
             }
 
+            double[] T = new double[segmentCount + 1];
             for (int i = 0; i < segmentCount + 1; i++)
-                result[i].x = current.At(i);
-            return result;
+                T[i] = a + (double)i * dt;
+
+            double[] flX = new double[segmentCount + 1];
+            flX[0] = aValue;
+            for (int i = 1; i < segmentCount; i++)
+                flX[i] = current.At(i - 1);
+            flX[segmentCount] = bValue;
+
+            return (dt, T, flX, start);
         }
 
-        private VN _GenerateDirectionVector(int dimension)
-        {
-            double[] coordinates = new double[dimension];
-
-            coordinates[0] = coordinates[coordinates.Length - 1] = 0;
-
-            for (int i = 1; i < coordinates.Length - 1; i++)
-                coordinates[i] = random.NextDouble();
-            return new VN(coordinates);
-        }
-
-        public double TargetFunction(VN vn, double dt)
+        public static double IntegralSum(VN vn, double dt, double aValue, double bValue)
         {
             double result = 0;
+
+            result += _TargetFunction(aValue, vn.At(0), dt);
             for (int i = 0; i < vn.Dimension - 1; i++)
-                result += (Math.Pow((vn.At(i + 1) - vn.At(i)) / dt, 2.0) + 4.0 * Math.Pow(vn.At(i), 2.0)) * dt;
+                result += _TargetFunction(vn.At(i), vn.At(i + 1), dt);
+            result += _TargetFunction(vn.At(vn.Dimension - 1), bValue, dt);
+
             return result;
+        }
+
+        private static double _TargetFunction(double xi, double xi1, double dt)
+        {
+            return (Math.Pow((xi1 - xi) / dt, 2.0) + 4.0 * xi * xi) * dt;
         }
     }
 }

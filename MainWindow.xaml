@@ -4,9 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Optimal_Control_Lab3"
+        xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <Button Name="Run" Content="Run me" Click="Run_Click"/>
-    </DockPanel>
+        Title="Lab 3 by Bohdan Pylypchenko" Height="491" Width="800">
+    <TabControl>
+        <TabItem Header="Properties">
+            <DockPanel Background="#FFE5E5E5">
+                <Label Content="Seed:" FontFamily="Calibri" FontSize="18" DockPanel.Dock="Top" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBox Name="SeedTextBox" TextWrapping="Wrap" Text="451" DockPanel.Dock="Top" FontSize="18"/>
+
+                <Label Content="Segment count:" FontFamily="Calibri" FontSize="18" DockPanel.Dock="Top" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBox Name="SegmentCountTextBox" TextWrapping="Wrap" Text="3" DockPanel.Dock="Top" FontSize="18"/>
+
+                <Label Content="Start step:" FontFamily="Calibri" FontSize="18" DockPanel.Dock="Top" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBox Name="StartStepTextBox" TextWrapping="Wrap" Text="0.1" DockPanel.Dock="Top" FontSize="18"/>
+
+                <Label Content="Min step:" FontFamily="Calibri" FontSize="18" DockPanel.Dock="Top" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBox Name="MinStepTextBox" TextWrapping="Wrap" Text="0.001" DockPanel.Dock="Top" FontSize="18"/>
+
+                <Label Content="Attempt count before step decrease:" FontFamily="Calibri" FontSize="18" DockPanel.Dock="Top" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBox Name="FailAttemptCountStepTextBox" TextWrapping="Wrap" Text="100" DockPanel.Dock="Top" FontSize="18"/>
+
+                <Label Content="Step decrease coefficient:" FontFamily="Calibri" FontSize="18" DockPanel.Dock="Top" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBox Name="StepCoefficientTextBox" TextWrapping="Wrap" Text="0.9" DockPanel.Dock="Top" FontSize="18"/>
+
+                <UniformGrid Rows="2" Columns="1" DockPanel.Dock="Top">
+                    <Button Name="RunButton" Content="Run" FontSize="18" FontWeight="Bold" FontStyle="Italic" DockPanel.Dock="Top" Click="RunButton_Click"/>
+                    <Button Name="ClearButton" Content="Clear" FontSize="18" FontWeight="Bold" FontStyle="Italic" DockPanel.Dock="Top" Click="ClearButton_Click"/>
+                </UniformGrid>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Plots">
+            <UniformGrid Background="#FFE5E5E5" Rows="2" Columns="1">
+                <ScottPlot:WpfPlot x:Name="FunctionPlot" DockPanel.Dock="Top"/>
+                <ScottPlot:WpfPlot x:Name="IntegralSumPlot" DockPanel.Dock="Top"/>
+            </UniformGrid>
+        </TabItem>
+        <TabItem Header="Log">
+            <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                <TextBox Name="RunTextBox" Text="" FontFamily="Cascadia Code" FontSize="18" IsReadOnly="True"/>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
 </Window>

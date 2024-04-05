@@ -1,54 +1,74 @@
-﻿namespace Optimal_Control_Lab3
+﻿using System.Text;
+
+namespace Optimal_Control_Lab3
 {
     public class VN
     {
-        private double[] coordinates;
+        double[] coordinates;
 
         public VN(double[] coordinates)
         {
             this.coordinates = coordinates;
         }
 
+        public VN(int dimension, Random random)
+        {
+            this.coordinates = new double[dimension];
+            for (int i = 0; i < dimension; i++)
+                this.coordinates[i] = -1.0 + 2.0 * random.NextDouble();
+        }
+
         public int Dimension => coordinates.Length;
-        
+
         public double At(int i)
         {
             return coordinates[i];
         }
 
-        public void Set(int i, double value)
+        public VN Normalize()
         {
-            coordinates[i] = value;
+            double module = Math.Sqrt(coordinates.Select(x => x * x).Sum());
+
+            double[] normalizedCoordinates = new double[coordinates.Length];
+            for (int i = 0; i <  coordinates.Length; i++)
+                normalizedCoordinates[i] = coordinates[i] / module;
+
+            return new VN(normalizedCoordinates);
         }
 
-        public VN MutateByNormalize()
+        public VN MultiplyOnScalar(double scalar)
         {
-            var module = Math.Sqrt(coordinates.Select(c => c * c).Sum());
+            double[] multipliedCoordinates = new double[coordinates.Length];
+
             for (int i = 0; i < coordinates.Length; i++)
-                coordinates[i] /= module;
-            return this;
+                multipliedCoordinates[i] = coordinates[i] * scalar;
+
+            return new VN(multipliedCoordinates);
         }
 
-        public VN MutateByAdd(VN other)
+        public VN Add(VN other)
         {
-            if (coordinates.Length == other.coordinates.Length)
-                for (int i = 0; i < coordinates.Length; i++)
-                    coordinates[i] += other.coordinates[i];
-            return this;
-        }
+            if (this.Dimension != other.Dimension)
+                throw new Exception();
 
-        public VN MutateByMultiplyOnScalar(double k)
-        {
+            double[] sumCoordinates = new double[coordinates.Length];
             for (int i = 0; i < coordinates.Length; i++)
-                coordinates[i] *= k;
-            return this;
+                sumCoordinates[i] = coordinates[i] + other.At(i);
+
+            return new VN(sumCoordinates);
         }
 
-        public VN DeepCopy()
+        public override string? ToString()
         {
-            double[] cloneCoordinates = new double[this.coordinates.Length];
-            Array.Copy(this.coordinates, cloneCoordinates, this.coordinates.Length);
-            return new VN(cloneCoordinates);
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("VN ");
+            stringBuilder.Append(this.GetHashCode());
+            stringBuilder.Append(": dim = ");
+            stringBuilder.Append(coordinates.Length);
+            stringBuilder.Append("; coords = | ");
+            for (int i = 0; i < coordinates.Length; i++)
+                stringBuilder.Append(String.Format("{0} |", coordinates[i].ToString("0.####")));
+            return stringBuilder.ToString();
         }
     }
 }
