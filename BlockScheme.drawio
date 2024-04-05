@@ -1,0 +1,143 @@
+<mxfile host="Electron" modified="2024-04-05T11:38:41.957Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="YYnZRrsKTUjD8QAcA4x8" version="24.1.0" type="device">
+  <diagram name="Page-1" id="0YkARrzy4RNxJrFN4fDl">
+    <mxGraphModel dx="2049" dy="1366" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-2" target="TXyrhDU9unYw_XG4w-Cs-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-2" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Вхідні дані&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- зерно випадкових чисел&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- початкова точка&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- початковий крок&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- мінімальний крок&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- коефіцієнт кроку&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;- максимальна кількість неуспішних кроків&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="40" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360.5" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-3" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;крок = початковий крок&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;&quot;&gt;поточна точка = початкова точка&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="259" y="230" width="203" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="TXyrhDU9unYw_XG4w-Cs-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360.5" y="371" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360.5" y="491" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-9" value="кількість неуспішних кроків = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="268" y="431" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-11" value="Так" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="315" y="390" width="35" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-14" target="TXyrhDU9unYw_XG4w-Cs-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-14" value="напрямок = згенерувати новий випадковий напрямок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="193" y="560" width="335" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-16" target="TXyrhDU9unYw_XG4w-Cs-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-16" value="нова точка = точка + напрямок * крок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="631" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-48" target="TXyrhDU9unYw_XG4w-Cs-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="593" y="741" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-21" target="TXyrhDU9unYw_XG4w-Cs-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="755" y="851" />
+              <mxPoint x="755" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-21" value="збільшити кількість неуспішних кроків" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="821" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-23" value="Ні" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="555" y="670" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-26" target="TXyrhDU9unYw_XG4w-Cs-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-26" value="перейти в нову точку&lt;div&gt;(Закінчити цикл)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="760" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-28" value="Так" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="362.5" y="720" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="TXyrhDU9unYw_XG4w-Cs-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360.5" y="521" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-34" target="TXyrhDU9unYw_XG4w-Cs-57">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="795" y="355" />
+              <mxPoint x="795" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-34" value="крок &amp;gt; мінімальний крок?" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="265.5" y="340" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-35" value="цикл [1; максимальна кількість неуспішних кроків]" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="140.75" y="490" width="439.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-37" target="TXyrhDU9unYw_XG4w-Cs-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="361" y="965" />
+              <mxPoint x="55" y="965" />
+              <mxPoint x="55" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-37" target="TXyrhDU9unYw_XG4w-Cs-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-37" target="TXyrhDU9unYw_XG4w-Cs-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="855" />
+              <mxPoint x="95" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-37" value="кількість неуспішних кроків &amp;gt;= максимальна кількість неуспішних кроків?" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="154" y="840" width="413" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-41" value="зменшити довжину кроку (крок = крок * коефіцієнт кроку)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="197" y="950" width="327" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TXyrhDU9unYw_XG4w-Cs-48" target="TXyrhDU9unYw_XG4w-Cs-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-48" value="цільова функція(нова точка) &amp;lt; цількова функція (точка)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="690" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-54" value="Ні" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="94" y="821" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-56" value="Так" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="362.5" y="881" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-57" value="рішення = поточна точка" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300.5" y="1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TXyrhDU9unYw_XG4w-Cs-60" value="Ні" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="455.5" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -61,18 +61,21 @@ namespace Optimal_Control_Lab3
 
                                     """;
 
-                var numericFunctionPlotScatter = FunctionPlot.Plot.Add.Scatter(T, X);
-                numericFunctionPlotScatter.Label = String.Format(LEGEND, "Numeric function",
-                                                                 _runCount, seed, segmentCount, startStep, minStep, failAttemptStepCount, stepCoefficient);
-
                 if (!_isActualPlotted)
                 {
                     double[] actualX = Enumerable.Range(0, 1000).Select(x => x / 1000.0).ToArray();
                     double[] actualY = actualX.Select(x => Math.Pow(Math.E, 2.0 - 2.0 * x)).ToArray();
                     var actualFunctionPlotSignal = FunctionPlot.Plot.Add.SignalXY(actualX, actualY);
                     actualFunctionPlotSignal.Label = "Analytical function";
+
+                    var actualIntegrationSum = IntegralSumPlot.Plot.Add.Line(0.0, 107.2, 1000.0, 107.2);
+                    actualIntegrationSum.Label = "Analytical integration sum";
                     _isActualPlotted = true;
                 }
+
+                var numericFunctionPlotScatter = FunctionPlot.Plot.Add.Scatter(T, X);
+                numericFunctionPlotScatter.Label = String.Format(LEGEND, "Numeric function",
+                                                                 _runCount, seed, segmentCount, startStep, minStep, failAttemptStepCount, stepCoefficient);
 
                 FunctionPlot.Plot.ShowLegend();
                 FunctionPlot.Refresh();
@@ -99,6 +102,7 @@ namespace Optimal_Control_Lab3
             IntegralSumPlot.Refresh();
             RunTextBox.Text = "";
             _runCount = 0;
+            _isActualPlotted = false;
         }
     }
 }
