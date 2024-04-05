@@ -1,0 +1,83 @@
+==========> Run 1 ============
+input parameters:
+    a = 0, x(a) = 7.3890560989306495
+    b = 1, x(b) = 1
+    seed = 451
+    segmentCount = 10
+    start step = 0.5 > min step 0.1,
+    fail attempt count = 100
+    step decrease coefficient = 0.9
+output:
+    Minimization result =
+    t = 0; x = 7.3891
+    t = 0.1; x = 6.0705
+    t = 0.2; x = 5.0189
+    t = 0.3; x = 4.1078
+    t = 0.4; x = 3.3692
+    t = 0.5; x = 2.7559
+    t = 0.6; x = 2.3126
+    t = 0.7; x = 1.9167
+    t = 0.8; x = 1.5676
+    t = 0.9; x = 1.2853
+    t = 1; x = 1
+
+    Integral sum value = 140.79964211317645
+
+    Start point (except a and b): VN 7691275: dim = 9; coords = | -0.3199 |-0.7018 |-0.9768 |0.6418 |0.6522 |0.3736 |0.9592 |0.4037 |0.5476 |
+===========================================
+
+==========> Run 2 ============
+input parameters:
+    a = 0, x(a) = 7.3890560989306495
+    b = 1, x(b) = 1
+    seed = 451
+    segmentCount = 10
+    start step = 0.5 > min step 0.01,
+    fail attempt count = 100
+    step decrease coefficient = 0.9
+output:
+    Minimization result =
+    t = 0; x = 7.3891
+    t = 0.1; x = 6.0518
+    t = 0.2; x = 4.9609
+    t = 0.3; x = 4.0647
+    t = 0.4; x = 3.3332
+    t = 0.5; x = 2.7288
+    t = 0.6; x = 2.2325
+    t = 0.7; x = 1.8294
+    t = 0.8; x = 1.4945
+    t = 0.9; x = 1.2236
+    t = 1; x = 1
+
+    Integral sum value = 140.6906654025613
+
+    Start point (except a and b): VN 2112619: dim = 9; coords = | -0.3199 |-0.7018 |-0.9768 |0.6418 |0.6522 |0.3736 |0.9592 |0.4037 |0.5476 |
+===========================================
+
+==========> Run 3 ============
+input parameters:
+    a = 0, x(a) = 7.3890560989306495
+    b = 1, x(b) = 1
+    seed = 451
+    segmentCount = 10
+    start step = 0.5 > min step 0.001,
+    fail attempt count = 100
+    step decrease coefficient = 0.9
+output:
+    Minimization result =
+    t = 0; x = 7.3891
+    t = 0.1; x = 6.0518
+    t = 0.2; x = 4.9567
+    t = 0.3; x = 4.0593
+    t = 0.4; x = 3.3244
+    t = 0.5; x = 2.7225
+    t = 0.6; x = 2.2292
+    t = 0.7; x = 1.8251
+    t = 0.8; x = 1.4941
+    t = 0.9; x = 1.2223
+    t = 1; x = 1
+
+    Integral sum value = 140.68989138100721
+
+    Start point (except a and b): VN 19013575: dim = 9; coords = | -0.3199 |-0.7018 |-0.9768 |0.6418 |0.6522 |0.3736 |0.9592 |0.4037 |0.5476 |
+===========================================
